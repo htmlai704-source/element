@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Periodic Table 118</title>
+
+<style>
+
+body{
+margin:0;
+font-family:system-ui;
+background:#0a0f1c;
+color:white;
+text-align:center;
+}
+
+h1{
+margin:20px;
+}
+
+.table{
+display:grid;
+grid-template-columns:repeat(18,60px);
+gap:6px;
+justify-content:center;
+}
+
+.series{
+display:grid;
+grid-template-columns:repeat(15,60px);
+gap:6px;
+justify-content:center;
+margin-top:20px;
+}
+
+.el{
+position:relative;
+padding:5px;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+font-size:10px;
+}
+
+.el:hover{
+transform:scale(1.2);
+box-shadow:0 0 15px cyan;
+z-index:2;
+}
+
+.sym{
+font-size:16px;
+font-weight:bold;
+}
+
+.name{
+opacity:0;
+position:absolute;
+bottom:-18px;
+left:50%;
+transform:translateX(-50%);
+font-size:9px;
+white-space:nowrap;
+}
+
+.el:hover .name{
+opacity:1;
+}
+
+/* colors */
+
+.metal{background:#1e3a8a;}
+.nonmetal{background:#065f46;}
+.noble{background:#7c2d12;}
+.metalloid{background:#5b21b6;}
+
+@media(max-width:700px){
+
+.table{
+grid-template-columns:repeat(9,1fr);
+}
+
+.series{
+grid-template-columns:repeat(8,1fr);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Periodic Table</h1>
+
+<div class="table">
+
+<div class="el nonmetal" style="grid-column:1"><div class="sym">H</div><div class="name">Hydrogen</div></div>
+<div class="el noble" style="grid-column:18"><div class="sym">He</div><div class="name">Helium</div></div>
+
+<div class="el metal" style="grid-column:1"><div class="sym">Li</div><div class="name">Lithium</div></div>
+<div class="el metal"><div class="sym">Be</div><div class="name">Beryllium</div></div>
+
+<div class="el metalloid" style="grid-column:13"><div class="sym">B</div><div class="name">Boron</div></div>
+<div class="el nonmetal"><div class="sym">C</div><div class="name">Carbon</div></div>
+<div class="el nonmetal"><div class="sym">N</div><div class="name">Nitrogen</div></div>
+<div class="el nonmetal"><div class="sym">O</div><div class="name">Oxygen</div></div>
+<div class="el nonmetal"><div class="sym">F</div><div class="name">Fluorine</div></div>
+<div class="el noble"><div class="sym">Ne</div><div class="name">Neon</div></div>
+
+<div class="el metal" style="grid-column:1"><div class="sym">Na</div><div class="name">Sodium</div></div>
+<div class="el metal"><div class="sym">Mg</div><div class="name">Magnesium</div></div>
+
+<div class="el metal" style="grid-column:13"><div class="sym">Al</div><div class="name">Aluminium</div></div>
+<div class="el metalloid"><div class="sym">Si</div><div class="name">Silicon</div></div>
+<div class="el nonmetal"><div class="sym">P</div><div class="name">Phosphorus</div></div>
+<div class="el nonmetal"><div class="sym">S</div><div class="name">Sulfur</div></div>
+<div class="el nonmetal"><div class="sym">Cl</div><div class="name">Chlorine</div></div>
+<div class="el noble"><div class="sym">Ar</div><div class="name">Argon</div></div>
+
+<div class="el metal" style="grid-column:1"><div class="sym">K</div><div class="name">Potassium</div></div>
+<div class="el metal"><div class="sym">Ca</div><div class="name">Calcium</div></div>
+
+<div class="el metal"><div class="sym">Sc</div><div class="name">Scandium</div></div>
+<div class="el metal"><div class="sym">Ti</div><div class="name">Titanium</div></div>
+<div class="el metal"><div class="sym">V</div><div class="name">Vanadium</div></div>
+<div class="el metal"><div class="sym">Cr</div><div class="name">Chromium</div></div>
+<div class="el metal"><div class="sym">Mn</div><div class="name">Manganese</div></div>
+<div class="el metal"><div class="sym">Fe</div><div class="name">Iron</div></div>
+<div class="el metal"><div class="sym">Co</div><div class="name">Cobalt</div></div>
+<div class="el metal"><div class="sym">Ni</div><div class="name">Nickel</div></div>
+<div class="el metal"><div class="sym">Cu</div><div class="name">Copper</div></div>
+<div class="el metal"><div class="sym">Zn</div><div class="name">Zinc</div></div>
+
+<div class="el metal"><div class="sym">Ga</div><div class="name">Gallium</div></div>
+<div class="el metalloid"><div class="sym">Ge</div><div class="name">Germanium</div></div>
+<div class="el metalloid"><div class="sym">As</div><div class="name">Arsenic</div></div>
+<div class="el nonmetal"><div class="sym">Se</div><div class="name">Selenium</div></div>
+<div class="el nonmetal"><div class="sym">Br</div><div class="name">Bromine</div></div>
+<div class="el noble"><div class="sym">Kr</div><div class="name">Krypton</div></div>
+
+<div class="el metal" style="grid-column:1"><div class="sym">Rb</div><div class="name">Rubidium</div></div>
+<div class="el metal"><div class="sym">Sr</div><div class="name">Strontium</div></div>
+
+<div class="el metal"><div class="sym">Y</div><div class="name">Yttrium</div></div>
+<div class="el metal"><div class="sym">Zr</div><div class="name">Zirconium</div></div>
+<div class="el metal"><div class="sym">Nb</div><div class="name">Niobium</div></div>
+<div class="el metal"><div class="sym">Mo</div><div class="name">Molybdenum</div></div>
+<div class="el metal"><div class="sym">Tc</div><div class="name">Technetium</div></div>
+<div class="el metal"><div class="sym">Ru</div><div class="name">Ruthenium</div></div>
+<div class="el metal"><div class="sym">Rh</div><div class="name">Rhodium</div></div>
+<div class="el metal"><div class="sym">Pd</div><div class="name">Palladium</div></div>
+<div class="el metal"><div class="sym">Ag</div><div class="name">Silver</div></div>
+<div class="el metal"><div class="sym">Cd</div><div class="name">Cadmium</div></div>
+
+<div class="el metal"><div class="sym">In</div><div class="name">Indium</div></div>
+<div class="el metal"><div class="sym">Sn</div><div class="name">Tin</div></div>
+<div class="el metalloid"><div class="sym">Sb</div><div class="name">Antimony</div></div>
+<div class="el metalloid"><div class="sym">Te</div><div class="name">Tellurium</div></div>
+<div class="el nonmetal"><div class="sym">I</div><div class="name">Iodine</div></div>
+<div class="el noble"><div class="sym">Xe</div><div class="name">Xenon</div></div>
+
+<div class="el metal" style="grid-column:1"><div class="sym">Cs</div><div class="name">Cesium</div></div>
+<div class="el metal"><div class="sym">Ba</div><div class="name">Barium</div></div>
+
+<div class="el metal" style="grid-column:3"><div class="sym">Hf</div><div class="name">Hafnium</div></div>
+<div class="el metal"><div class="sym">Ta</div><div class="name">Tantalum</div></div>
+<div class="el metal"><div class="sym">W</div><div class="name">Tungsten</div></div>
+<div class="el metal"><div class="sym">Re</div><div class="name">Rhenium</div></div>
+<div class="el metal"><div class="sym">Os</div><div class="name">Osmium</div></div>
+<div class="el metal"><div class="sym">Ir</div><div class="name">Iridium</div></div>
+<div class="el metal"><div class="sym">Pt</div><div class="name">Platinum</div></div>
+<div class="el metal"><div class="sym">Au</div><div class="name">Gold</div></div>
+<div class="el metal"><div class="sym">Hg</div><div class="name">Mercury</div></div>
+
+<div class="el metal"><div class="sym">Tl</div><div class="name">Thallium</div></div>
+<div class="el metal"><div class="sym">Pb</div><div class="name">Lead</div></div>
+<div class="el metal"><div class="sym">Bi</div><div class="name">Bismuth</div></div>
+<div class="el metalloid"><div class="sym">Po</div><div class="name">Polonium</div></div>
+<div class="el metalloid"><div class="sym">At</div><div class="name">Astatine</div></div>
+<div class="el noble"><div class="sym">Rn</div><div class="name">Radon</div></div>
+
+<div class="el metal" style="grid-column:1"><div class="sym">Fr</div><div class="name">Francium</div></div>
+<div class="el metal"><div class="sym">Ra</div><div class="name">Radium</div></div>
+
+<div class="el metal" style="grid-column:3"><div class="sym">Rf</div><div class="name">Rutherfordium</div></div>
+<div class="el metal"><div class="sym">Db</div><div class="name">Dubnium</div></div>
+<div class="el metal"><div class="sym">Sg</div><div class="name">Seaborgium</div></div>
+<div class="el metal"><div class="sym">Bh</div><div class="name">Bohrium</div></div>
+<div class="el metal"><div class="sym">Hs</div><div class="name">Hassium</div></div>
+<div class="el metal"><div class="sym">Mt</div><div class="name">Meitnerium</div></div>
+<div class="el metal"><div class="sym">Ds</div><div class="name">Darmstadtium</div></div>
+<div class="el metal"><div class="sym">Rg</div><div class="name">Roentgenium</div></div>
+<div class="el metal"><div class="sym">Cn</div><div class="name">Copernicium</div></div>
+
+<div class="el metal"><div class="sym">Nh</div><div class="name">Nihonium</div></div>
+<div class="el metal"><div class="sym">Fl</div><div class="name">Flerovium</div></div>
+<div class="el metal"><div class="sym">Mc</div><div class="name">Moscovium</div></div>
+<div class="el metal"><div class="sym">Lv</div><div class="name">Livermorium</div></div>
+<div class="el nonmetal"><div class="sym">Ts</div><div class="name">Tennessine</div></div>
+<div class="el noble"><div class="sym">Og</div><div class="name">Oganesson</div></div>
+
+</div>
+
+<h2>Lanthanide</h2>
+<div class="series">
+<div class="el metal"><div class="sym">La</div><div class="name">Lanthanum</div></div>
+<div class="el metal"><div class="sym">Ce</div><div class="name">Cerium</div></div>
+<div class="el metal"><div class="sym">Pr</div><div class="name">Praseodymium</div></div>
+<div class="el metal"><div class="sym">Nd</div><div class="name">Neodymium</div></div>
+<div class="el metal"><div class="sym">Pm</div><div class="name">Promethium</div></div>
+<div class="el metal"><div class="sym">Sm</div><div class="name">Samarium</div></div>
+<div class="el metal"><div class="sym">Eu</div><div class="name">Europium</div></div>
+<div class="el metal"><div class="sym">Gd</div><div class="name">Gadolinium</div></div>
+<div class="el metal"><div class="sym">Tb</div><div class="name">Terbium</div></div>
+<div class="el metal"><div class="sym">Dy</div><div class="name">Dysprosium</div></div>
+<div class="el metal"><div class="sym">Ho</div><div class="name">Holmium</div></div>
+<div class="el metal"><div class="sym">Er</div><div class="name">Erbium</div></div>
+<div class="el metal"><div class="sym">Tm</div><div class="name">Thulium</div></div>
+<div class="el metal"><div class="sym">Yb</div><div class="name">Ytterbium</div></div>
+<div class="el metal"><div class="sym">Lu</div><div class="name">Lutetium</div></div>
+</div>
+
+<h2>Actinide</h2>
+<div class="series">
+<div class="el metal"><div class="sym">Ac</div><div class="name">Actinium</div></div>
+<div class="el metal"><div class="sym">Th</div><div class="name">Thorium</div></div>
+<div class="el metal"><div class="sym">Pa</div><div class="name">Protactinium</div></div>
+<div class="el metal"><div class="sym">U</div><div class="name">Uranium</div></div>
+<div class="el metal"><div class="sym">Np</div><div class="name">Neptunium</div></div>
+<div class="el metal"><div class="sym">Pu</div><div class="name">Plutonium</div></div>
+<div class="el metal"><div class="sym">Am</div><div class="name">Americium</div></div>
+<div class="el metal"><div class="sym">Cm</div><div class="name">Curium</div></div>
+<div class="el metal"><div class="sym">Bk</div><div class="name">Berkelium</div></div>
+<div class="el metal"><div class="sym">Cf</div><div class="name">Californium</div></div>
+<div class="el metal"><div class="sym">Es</div><div class="name">Einsteinium</div></div>
+<div class="el metal"><div class="sym">Fm</div><div class="name">Fermium</div></div>
+<div class="el metal"><div class="sym">Md</div><div class="name">Mendelevium</div></div>
+<div class="el metal"><div class="sym">No</div><div class="name">Nobelium</div></div>
+<div class="el metal"><div class="sym">Lr</div><div class="name">Lawrencium</div></div>
+</div>
+
+</body>
+</html>
